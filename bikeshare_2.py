@@ -53,7 +53,7 @@ def get_filters():
 
 def display_raw_data(df):
     """
-    Displays raw data upon user request.
+    Displays raw data upon user request 5 lines at a time.
 
     Args:
         df - Pandas DataFrame containing city data filtered by month and day
@@ -208,7 +208,8 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
-
+       
+        #for debugging purpose
         #test not at all filter
         #city = 'chicago'
         #month = 'all'
