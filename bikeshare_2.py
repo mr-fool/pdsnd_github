@@ -218,15 +218,25 @@ def user_stats(df):
 
 def main():
     while True:
+        # Prompt the user for city, month, and day filters
         city, month, day = get_filters()
-       
+
+        # Load the data based on the filters
         df = load_data(city, month, day)
 
+        # Display the raw data to the user
         display_raw_data(df)
 
+        # Calculate and display time statistics
         time_stats(df)
+
+        # Calculate and display station statistics
         station_stats(df)
+
+        # Calculate and display trip duration statistics
         trip_duration_stats(df)
+
+        # Calculate and display user statistics
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
