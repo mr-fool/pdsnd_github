@@ -82,7 +82,7 @@ def load_data(city, month, day):
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-
+    # Load csv
     df = pd.read_csv(CITY_DATA[city])
 
     #check if it is loaded properly 
@@ -167,7 +167,7 @@ def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration.
     Args:
         df - Pandas DataFrame containing city data filtered by month and day
-        """
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
