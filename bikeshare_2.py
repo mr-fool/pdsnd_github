@@ -220,29 +220,8 @@ def main():
     while True:
         city, month, day = get_filters()
        
-        #for debugging purpose
-        #test not at all filter
-        #city = 'chicago'
-        #month = 'all'
-        #day = 'all'
-
-        #test month filter
-        #city = 'washington'
-        #month = 'june'
-        #day = 'all'
-
-        #test day filter
-        #city = 'new_york_city'
-        #month = 'all'
-        #day = 'sunday'
-
-        #test every filter
-        #city = 'new_york_city'
-        #month = 'june'
-        #day = 'monday'
         df = load_data(city, month, day)
 
-        #print(df.head())
         display_raw_data(df)
 
         time_stats(df)
